@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 0.50">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title> Antonymns </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 0.5px solid blue;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1> Synonyms </h1>
+        <hr><br>
+    </div>
+    <table style="width:100%">
+        <tr>
+            <th> Word </th>
+            <th>Synonym 1</th>
+            <th> Synonym 2</th>
+        </tr>
+        <tr>
+            <div class="que">
+                <td> question </td>
+                <td><input type="text" autocomplete="off" id="1a" style="height: 30px;" /> </td>
+                <td><input type="text" autocomplete="off" id="1b" style="height: 30px;" /> </td>
+                <td> ( Query / Answer / Doubt / Approval)</td>
+        </tr>
+        </div>
+        <tr>
+
+            <td>Cool</td>
+            <td><input type="text" autocomplete="off" id="2a" style="height: 30px;" /> </td>
+            <td><input type="text" autocomplete="off" id="2b" style="height: 30px;" /> </td>
+            <td> ( Chilly / Hot/ Warm / Cold)</td>
+
+        </tr>
+        <tr>
+            <td>False</td>
+            <td><input type="text" autocomplete="off" id="3a" style="height: 30px;" /> </td>
+            <td><input type="text" autocomplete="off" id="3b" style="height: 30px;" /> </td>
+
+
+            <td>(True / Fake / Wrong / Flault )</td>
+        </tr>
+
+        <tr>
+
+            <td>Deep</td>
+            <td><input type="text" autocomplete="off" id="4a" style="height: 30px;" /> </td>
+            <td><input type="text" autocomplete="off" id="4b" style="height: 30px;" /> </td>
+            <td> (Shallow/ Extensive/ Profound / Trivial)</td>
+        </tr>
+
+        <tr>
+
+            <td>Friend</td>
+            <td><input type="text" autocomplete="off" id="5a" style="height: 30px;" /> </td>
+            <td><input type="text" autocomplete="off" id="5b" style="height: 30px;" /> </td>
+            <td>(Foe / Ally / Aquaintance /Enemy )</td>
+        </tr>
+        <tr>
+
+            <td>Strong</td>
+            <td><input type="text" autocomplete="off" id="6a" style="height: 30px;" /> </td>
+            <td><input type="text" autocomplete="off" id="6b" style="height: 30px;" /> </td>
+            <td>(Weak/ Potent/ Tough / Frail )</td>
+        </tr>
+
+    </table>
+    <div class="button">
+        <input type="submit" name="submit" value="Submit" onclick="check();" class="submit" style="height:30px; width:100px;">
+    </div>
+    <div class="instructions" id="endgame" style="display:none;">
+        <h2><strong><u>Game ends</u></strong></h2>
+        <h3>Your score is: <span id="score"></span></h3>
+        <div><a href="index.html">Main - Menu</a></div>
+        <div><a href="answers.html">Check Your Answers</a></div>
+        <div><a href="https://englishbolega.com/games">Play More</a></div>
+    </div>
+    <script>
+        function check() {
+            var ans1a = document.getElementById('1a').value;
+            var ans1b = document.getElementById('1b').value;
+            var ans2a = document.getElementById('2a').value;
+            var ans2b = document.getElementById('2b').value;
+            var ans3a = document.getElementById('3a').value;
+            var ans3b = document.getElementById('3b').value;
+            var ans4a = document.getElementById('4a').value;
+            var ans4b = document.getElementById('4b').value;
+            var ans5a = document.getElementById('5a').value;
+            var ans5b = document.getElementById('5b').value;
+            var ans6a = document.getElementById('6a').value;
+            var ans6b = document.getElementById('6b').value;
+
+            var score = 0;
+
+            var a1a = "Query";
+            var a1b = "Doubt";
+            var a2a = "Chilly";
+            var a2b = "Cold";
+            var a3a = "Fake";
+            var a3b = "Wrong";
+            var a4a = "Profound";
+            var a4b = "Extensive";
+            var a5a = "Ally";
+            var a5b = "Aquintaince";
+            var a6a = "Tough";
+            var a6b = "Potent";
+
+            if (ans1a == a1a || ans1a == a1b) {
+                score++;
+            }
+
+            if (ans1b == a1a || ans1b == a1b) {
+                score++;
+            }
+
+            if (ans2a == a2a || ans2a == a2b) {
+                score++;
+            }
+
+            if (ans2b == a2a || ans2b == a2b) {
+                score++;
+            }
+
+            if (ans3a == a3a || ans3a == a3b) {
+                score++;
+            }
+
+            if (ans3b == a3a || ans3b == a3b) {
+                score++;
+            }
+
+            if (ans4a == a4a || ans4a == a4b) {
+                score++;
+            }
+
+            if (ans4b == a4a || ans4b == a4b) {
+                score++;
+            }
+
+            if (ans5a == a5a || ans5a == a5b) {
+                score++;
+            }
+
+            if (ans5b == a5a || ans5b == a5b) {
+                score++;
+            }
+
+            if (ans6a == a6a || ans6a == a6b) {
+                score++;
+            }
+
+            if (ans6b == a6a || ans6b == a6b) {
+                score++;
+            }
+
+            document.getElementById('score').innerHTML = score;
+            document.getElementById('endgame').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

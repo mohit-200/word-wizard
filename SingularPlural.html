@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 0.50">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title> Antonymns </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 0.5px solid blue;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1> Antonyms </h1>
+        <hr><br>
+    </div>
+    <table style="width:100%">
+        <tr>
+            <th> Singular </th>
+            <th>Plural</th>
+
+        </tr>
+        <tr>
+            <div class="que">
+                <td> Boy </td>
+                <td><input type="text" autocomplete="off" id="1a" style="height: 30px;" /> </td>
+
+        </tr>
+        </div>
+        <tr>
+
+            <td>Child</td>
+            <td><input type="text" autocomplete="off" id="2a" style="height: 30px;" /> </td>
+
+
+        </tr>
+        <tr>
+            <td>Man</td>
+            <td><input type="text" autocomplete="off" id="3a" style="height: 30px;" /> </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Tooth</td>
+            <td><input type="text" autocomplete="off" id="4a" style="height: 30px;" /> </td>
+
+        </tr>
+
+        <tr>
+
+            <td>City</td>
+            <td><input type="text" autocomplete="off" id="5a" style="height: 30px;" /> </td>
+
+        </tr>
+        <tr>
+
+            <td>Deer</td>
+            <td><input type="text" autocomplete="off" id="6a" style="height: 30px;" /> </td>
+
+        </tr>
+
+    </table>
+    <div class="button">
+        <input type="submit" name="submit" value="Submit" onclick="check();" class="submit" style="height:30px; width:100px;">
+    </div>
+    <div class="instructions" id="endgame" style="display:none;">
+        <h2><strong><u>Game ends</u></strong></h2>
+        <h3>Your score is: <span id="score"></span></h3>
+        <div><a href="index.html">Main - Menu</a></div>
+        <div><a href="answers.html">Check Your Answers</a></div>
+        <div><a href="https://englishbolega.com/games">Play More</a></div>
+    </div>
+</body>
+<script>
+    function check() {
+        var ans1a = document.getElementById('1a').value;
+
+        var ans2a = document.getElementById('2a').value;
+
+        var ans3a = document.getElementById('3a').value;
+
+        var ans4a = document.getElementById('4a').value;
+
+        var ans5a = document.getElementById('5a').value;
+
+        var ans6a = document.getElementById('6a').value;
+
+
+        var score = 0;
+
+        var a1a = "Boys";
+
+        var a2a = "Children";
+
+        var a3a = "Men";
+
+        var a4a = "Teeth";
+
+        var a5a = "Cities";
+
+        var a6a = "Deer";
+
+
+        if (ans1a == a1a) {
+            score++;
+        }
+
+
+
+        if (ans2a == a2a) {
+            score++;
+        }
+
+
+
+        if (ans3a == a3a) {
+            score++;
+        }
+
+
+
+        if (ans4a == a4a) {
+            score++;
+        }
+
+
+
+        if (ans5a == a5a) {
+            score++;
+        }
+
+
+
+        if (ans6a == a6a) {
+            score++;
+        }
+
+
+
+        document.getElementById('score').innerHTML = score;
+        document.getElementById('endgame').style.display = "block";
+    }
+</script>
+
+</html>

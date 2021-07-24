@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(120deg, #b7f38f, #f8b05d, #ebdf9d);
+    min-height: 100vh;
+}
+
+.main {
+    text-align: center;
+}
+
+.main h1 {
+    color: #eee;
+    font-size: 30px;
+    font-family: cursive;
+    text-shadow: 3px 3px 5px grey;
+    border: 5px double #fff;
+    border-top: none;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.main .que {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: medium;
+}
+
+.main .que h3 {
+    color: rgba(230, 18, 212);
+    font-size: 20px;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.main .que .fill {
+    color: rgb(68, 55, 55);
+    font-size: 20px;
+    font-family: cursive;
+    border-bottom: 2px solid #000;
+    min-width: 100px;
+}
+
+.main .submit {
+    color: greenyellow;
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(#ff0066, #800033);
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    border: 2px solid #fff;
+}
+
+.main .start {
+    color: gray;
+    width: 150 px;
+    height: 100px;
+}
+
+.main .submit:hover {
+    background: linear-gradient(#800033, #ff0066);
+}
